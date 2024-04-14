@@ -17,8 +17,8 @@ def get_details():
         'appid' : request.form.get('appid')
     }
     response =  requests.get(url, parmas)
-    city = data['name']
     data = response.json()
+    city = data['name']
     return f'data: {data}, city:{city}'
 
 if __name__ == '__main__':
